@@ -8,7 +8,7 @@ const app = express()
 
 app.use(express.json())
 
-app.listen(3000, () => console.log("Server is running aaaaaaaaa"))
+app.listen(3000, () => console.log("Server is running aaaaaaaaaAAAAAAAAAAAA"))
 
 
 app.get("/test", (request, response) => {
