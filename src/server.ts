@@ -1,15 +1,21 @@
 import "reflect-metadata"
 
 import express from "express" // biblioteca essencial
-
+import { router } from "./routes"
 import "./database" //por definição está importando o index.ts
 
-const app = express()
+const app = express();
 
-app.use(express.json())
+app.use(express.json());
 
-app.listen(3000, () => console.log("Server is running aaaaaaaaaAAAAAAAAAAAA"))
+app.use(router);
 
+app.listen(3000, () => console.log("Server is running"));
+
+
+
+
+/*
 
 app.get("/test", (request, response) => {
   return response.send("Hello world!")
