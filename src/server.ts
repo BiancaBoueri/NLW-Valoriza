@@ -3,10 +3,14 @@ import "reflect-metadata"
 import express, { Request, Response, NextFunction } from "express" // biblioteca essencial
 import "express-async-errors";
 
+import cors from "cors";
+
 import { router } from "./routes"
 import "./database" //por definição está importando o index.ts
 
 const app = express();
+
+app.use(cors()); // pra adicionar um frontend.
 
 app.use(express.json()); //middleware, entre a req e a resp
 
